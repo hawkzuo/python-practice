@@ -1,0 +1,11 @@
+
+
+
+
+app-root/manage.py:
+    A CLI for the project
+
+
+
+
+
