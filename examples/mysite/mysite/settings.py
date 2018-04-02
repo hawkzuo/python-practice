@@ -31,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # App needs to be included here
+    'polls.apps.PollsConfig',       # Qualified class name
+    'django.contrib.admin',         # The admin site
+    'django.contrib.auth',          # Authentication system
+    'django.contrib.contenttypes',  # Framework for contenttypes
+    'django.contrib.sessions',      # F for session
+    'django.contrib.messages',      # F for messages
+    'django.contrib.staticfiles',   # F for managing static files
 ]
 
 MIDDLEWARE = [
@@ -72,6 +74,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+# For now, use sqlite, Heroku uses PostgreSQL, others include AWS RDS MySQL
+# For project perspective, might not need the DB part and the View part.
 
 DATABASES = {
     'default': {
