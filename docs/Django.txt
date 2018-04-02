@@ -4,8 +4,13 @@
 
 app-root/manage.py:
     A CLI for the project
+    python manage.py runserver 8080
 
-
-
+Part1:
+A project consists of many apps.
+Routes Definition:
+    - Add methods[index/show/new/...] on appName/views.py
+    - Add path to urlpatterns on projectName/urls.py
+    -
 
 

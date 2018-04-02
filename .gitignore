@@ -2,5 +2,9 @@
 .idea/
 
 
+# pycache
+*.pyc
+
+
 
 
