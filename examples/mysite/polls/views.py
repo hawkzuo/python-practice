@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 
 # Create your views here.
@@ -17,6 +17,8 @@ def results(request, question_id):
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 
+def json_request(request):
 
+    return JsonResponse({'status': 'Failed'})
 
 
