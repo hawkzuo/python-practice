@@ -1,0 +1,9 @@
+* Gparted not opening:
+  https://askubuntu.com/questions/939938/gparted-cannot-open-display/939949
+  `xhost +local:`
+  `gparted-pkexec`
+
+
+
+
+
