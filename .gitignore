@@ -1,6 +1,6 @@
 # IDEA
 .idea/
-
+out/
 
 # pycache
 *.pyc
