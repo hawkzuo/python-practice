@@ -237,6 +237,27 @@ def files():
     pass
 
 
+def errors():
+    try:
+        x = int(input("Please enter a number:"))
+        print("Input number is:", x)
+        raise CustomizedError("Explicitly raise error")
+    except (ValueError, RuntimeError, TypeError) as e:
+        print("Input is not a number")
+        print(e.args)
+    finally:
+        print("This statement will always be executed")
+    pass
+
+
+class CustomizedError(Exception):
+    def __init__(self, expression, message):
+        self.expression = expression
+        self.message = message
+    pass
+
+
+
 if __name__ == "__main__":
     numbers()
     strings()
@@ -248,4 +269,5 @@ if __name__ == "__main__":
     modules()
     # str.format()
     files()
+    errors()
 
