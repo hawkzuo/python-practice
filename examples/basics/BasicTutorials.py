@@ -254,8 +254,30 @@ class CustomizedError(Exception):
     def __init__(self, expression, message):
         self.expression = expression
         self.message = message
+
     pass
 
+
+def scope_test():
+    def do_local():
+        # Warning: Shadows name 'spam' from outer scope
+        spam = "local spam"
+
+    def do_nonlocal():
+        nonlocal spam
+        spam = "nonlocal spam"
+
+    def do_global():
+        global spam
+        spam = "global spam"
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
 
 
 if __name__ == "__main__":
@@ -270,4 +292,9 @@ if __name__ == "__main__":
     # str.format()
     files()
     errors()
+    scope_test()
+    print("In global scope:", spam)
+
+
+
 
